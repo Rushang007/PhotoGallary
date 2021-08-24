@@ -10,5 +10,9 @@ import Foundation
 
 struct KEYSPROJECT {
     static var savedata = "savedata"
+    
+}
+struct APIS {
+    static var getdata = "https://run.mocky.io/v3/aa4b7bbe-e4f1-4bf7-85e1-551750dc1940"
     static var statename = "statename"
 }

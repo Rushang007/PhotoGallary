@@ -32,7 +32,8 @@ class LoginVC: UIViewController {
         let credential = Credentials(emailid: emailid, password: password)
       
        try? KeychainInterface.save(password: KeychainInterface.stringToNSDATA(string: credential.password) as Data, service: KEYSPROJECT.savedata, account: credential.emailid)
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardVC") as! DashboardVC
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
    
