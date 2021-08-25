@@ -9,4 +9,5 @@ target 'PhotoGallary' do
 pod 'IQKeyboardManagerSwift'
 pod 'AFNetworking'
 pod 'SDWebImage'
+pod 'JNKeychain'
 end

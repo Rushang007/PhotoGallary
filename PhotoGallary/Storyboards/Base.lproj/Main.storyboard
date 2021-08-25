@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="84G-Tp-xKC">
-                                <rect key="frame" x="5" y="44" width="404" height="818"/>
+                                <rect key="frame" x="5" y="44" width="404" height="769"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kwK-aJ-uBW">
                                     <size key="itemSize" width="156" height="176"/>
@@ -116,12 +116,21 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="VSS-vs-5HB">
+                                                            <rect key="frame" x="111" y="4" width="35" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="1vQ-fa-sRS"/>
+                                                                <constraint firstAttribute="width" constant="35" id="7vQ-nH-IrU"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="ebk-Ss-gEI" firstAttribute="leading" secondItem="0Kc-jI-Ogl" secondAttribute="leading" id="4mo-1s-aro"/>
+                                                        <constraint firstItem="VSS-vs-5HB" firstAttribute="top" secondItem="Lh2-pi-y9P" secondAttribute="top" constant="4" id="9ae-mT-Oag"/>
                                                         <constraint firstAttribute="trailing" secondItem="ebk-Ss-gEI" secondAttribute="trailing" id="Dde-Yo-5Ui"/>
                                                         <constraint firstAttribute="bottom" secondItem="ebk-Ss-gEI" secondAttribute="bottom" id="JtO-4v-ut7"/>
+                                                        <constraint firstItem="VSS-vs-5HB" firstAttribute="trailing" secondItem="Lh2-pi-y9P" secondAttribute="trailing" constant="-4" id="Wo7-0p-xFN"/>
                                                         <constraint firstAttribute="trailing" secondItem="Lh2-pi-y9P" secondAttribute="trailing" id="cXS-4F-59l"/>
                                                         <constraint firstItem="ebk-Ss-gEI" firstAttribute="top" secondItem="Lh2-pi-y9P" secondAttribute="bottom" id="fqR-IS-xI5"/>
                                                         <constraint firstItem="Lh2-pi-y9P" firstAttribute="top" secondItem="0Kc-jI-Ogl" secondAttribute="top" id="qzO-RT-FVR"/>
@@ -140,6 +149,7 @@
                                         <connections>
                                             <outlet property="gallaryimage" destination="Lh2-pi-y9P" id="2og-YV-Evo"/>
                                             <outlet property="lbl_name" destination="ebk-Ss-gEI" id="nxd-lK-WDV"/>
+                                            <outlet property="selecteditem" destination="VSS-vs-5HB" id="Qs1-f3-ZNf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -148,8 +158,8 @@
                                     <outlet property="delegate" destination="JI1-MS-NlZ" id="D5W-dx-BqC"/>
                                 </connections>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JK5-Ac-Gqw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JK5-Ac-Gqw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Tbl_Dashboard_Cell" rowHeight="150" id="pLu-3y-JJN" customClass="Tbl_Dashboard_Cell" customModule="PhotoGallary" customModuleProvider="target">
@@ -174,13 +184,22 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="AVd-uP-Mjt">
+                                                            <rect key="frame" x="355" y="91" width="35" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="NsF-O8-84m"/>
+                                                                <constraint firstAttribute="height" constant="35" id="OOC-cB-A2R"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="Xwf-aJ-sI7" firstAttribute="leading" secondItem="BEe-FI-but" secondAttribute="trailing" constant="8" id="5wm-XJ-Uxd"/>
                                                         <constraint firstAttribute="bottom" secondItem="BEe-FI-but" secondAttribute="bottom" id="L7j-lP-c7u"/>
+                                                        <constraint firstAttribute="trailing" secondItem="AVd-uP-Mjt" secondAttribute="trailing" constant="8" id="PUD-fp-RIg"/>
                                                         <constraint firstItem="Xwf-aJ-sI7" firstAttribute="centerY" secondItem="BEe-FI-but" secondAttribute="centerY" id="QlL-ZO-Mqp"/>
                                                         <constraint firstItem="BEe-FI-but" firstAttribute="top" secondItem="IAY-0h-07o" secondAttribute="top" id="an1-oX-kyI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="AVd-uP-Mjt" secondAttribute="bottom" constant="8" id="lCN-Og-pgh"/>
                                                         <constraint firstItem="BEe-FI-but" firstAttribute="leading" secondItem="IAY-0h-07o" secondAttribute="leading" id="sfa-k0-9kf"/>
                                                         <constraint firstAttribute="trailing" secondItem="Xwf-aJ-sI7" secondAttribute="trailing" constant="8" id="soN-SG-l2b"/>
                                                     </constraints>
@@ -196,6 +215,7 @@
                                         <connections>
                                             <outlet property="gallaryimage" destination="BEe-FI-but" id="GZV-6o-RoR"/>
                                             <outlet property="lbl_name" destination="Xwf-aJ-sI7" id="zqf-Jv-IXt"/>
+                                            <outlet property="selecteditem" destination="AVd-uP-Mjt" id="PVY-c4-eSo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -218,6 +238,8 @@
                             <constraint firstItem="JK5-Ac-Gqw" firstAttribute="top" secondItem="5RD-KB-wAl" secondAttribute="top" id="xf1-tx-VYX"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionview" destination="84G-Tp-xKC" id="Rn5-Yz-91I"/>
                         <outlet property="tbllist" destination="JK5-Ac-Gqw" id="qCY-g2-TlE"/>
@@ -226,6 +248,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfk-rN-Z4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1621.7391304347827" y="83.705357142857139"/>
+        </scene>
+        <!--Image ViewerVC-->
+        <scene sceneID="G02-cg-vyk">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewerVC" id="qv0-8o-Pfy" customClass="ImageViewerVC" customModule="PhotoGallary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nEf-Zf-4zJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-Ys-j2z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Pzb-Ky-TkC">
+                                    <size key="itemSize" width="156" height="176"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageViewer_Cell" id="JVG-aK-It7" customClass="ImageViewer_Cell" customModule="PhotoGallary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3po-eU-fOH">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyU-fI-WPF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZY-zO-LRH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="xZY-zO-LRH" secondAttribute="trailing" id="3ze-jA-k4l"/>
+                                                        <constraint firstItem="xZY-zO-LRH" firstAttribute="leading" secondItem="uyU-fI-WPF" secondAttribute="leading" id="Hry-2A-Npe"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xZY-zO-LRH" secondAttribute="bottom" id="JIk-G8-ajT"/>
+                                                        <constraint firstItem="xZY-zO-LRH" firstAttribute="top" secondItem="uyU-fI-WPF" secondAttribute="top" id="Who-QM-qnJ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="uyU-fI-WPF" secondAttribute="bottom" id="kdT-Sl-M1s"/>
+                                                <constraint firstAttribute="trailing" secondItem="uyU-fI-WPF" secondAttribute="trailing" id="r9l-1Y-DDV"/>
+                                                <constraint firstItem="uyU-fI-WPF" firstAttribute="top" secondItem="3po-eU-fOH" secondAttribute="top" id="yWw-RK-Nqe"/>
+                                                <constraint firstItem="uyU-fI-WPF" firstAttribute="leading" secondItem="3po-eU-fOH" secondAttribute="leading" id="yzu-6O-ha0"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="150" height="170"/>
+                                        <connections>
+                                            <outlet property="gallaryimage" destination="xZY-zO-LRH" id="7JP-zK-HWQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qv0-8o-Pfy" id="eYe-4I-Nuk"/>
+                                    <outlet property="delegate" destination="qv0-8o-Pfy" id="LET-MD-obu"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dk8-fS-hcU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cQf-Ys-j2z" firstAttribute="leading" secondItem="dk8-fS-hcU" secondAttribute="leading" id="LZo-eh-G25"/>
+                            <constraint firstItem="cQf-Ys-j2z" firstAttribute="top" secondItem="dk8-fS-hcU" secondAttribute="top" id="Lm7-LH-jww"/>
+                            <constraint firstAttribute="bottom" secondItem="cQf-Ys-j2z" secondAttribute="bottom" id="fFN-9C-6ym"/>
+                            <constraint firstAttribute="trailing" secondItem="cQf-Ys-j2z" secondAttribute="trailing" id="suH-cE-lxU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionview" destination="cQf-Ys-j2z" id="o4g-KX-vo9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnc-V6-Uw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2311" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="exo-jN-qi3">
@@ -246,6 +345,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark" width="35" height="35"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -25,19 +25,20 @@ class NetworkUtility
     {
         let manager = AFHTTPSessionManager()
         manager.get(requestUrl, parameters: nil, headers: nil, progress: nil) { operation, responseObject in
+            
             if let repsonse = responseObject
             {
-               if let dataJson = try? JSONSerialization.data(withJSONObject: repsonse, options: JSONSerialization.WritingOptions.prettyPrinted)
-               {
-               if  let objCodable = try? JSONDecoder().decode(resultType, from: dataJson) as? ResponseData
-               {
-                _=completionHandler(objCodable as? T)
-               }
-               
-               }
+                if let dataJson = try? JSONSerialization.data(withJSONObject: repsonse, options: JSONSerialization.WritingOptions.prettyPrinted)
+                {
+                    if  let objCodable = try? JSONDecoder().decode(resultType, from: dataJson) as? ResponseData
+                    {
+                        _=completionHandler(objCodable as? T)
+                    }
+                    
+                }
                 
             }
-         
+            
         } failure: { operation, error in
             print("Error: " + error.localizedDescription)
         }

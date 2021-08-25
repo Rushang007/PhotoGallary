@@ -7,9 +7,13 @@
 
 import Foundation
 
+let appDel = (UIApplication.shared.delegate as! AppDelegate)
+
 
 struct KEYSPROJECT {
-    static var savedata = "savedata"
+    static var accessGroup = "com.gallaryapp"
+    static var email = "email"
+    static var password = "password"
     
 }
 struct APIS {
@@ -17,3 +21,4 @@ struct APIS {
     static var getdata = "https://api-dev-scus-demo.azurewebsites.net/api/Animal/GetAnimals"
     static var statename = "statename"
 }
+

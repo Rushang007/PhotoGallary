@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct ResponseData: Decodable {
+struct ResponseData: Codable {
     let errorMessage: String
     let gallary: [Gallary]
+    
 
     enum CodingKeys: String, CodingKey {
         case gallary = "data"
@@ -18,6 +19,7 @@ struct ResponseData: Decodable {
 }
 
 // MARK: - Datum
-struct Gallary: Decodable {
+struct Gallary: Codable,Hashable {
     let name, image: String
+    var isselected:Bool? = nil
 }
