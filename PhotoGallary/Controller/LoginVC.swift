@@ -20,18 +20,18 @@ class LoginVC: UIViewController {
 
     
     @IBAction func PressOnLogin(_ sender: UIButton) {
-        self.view.endEditing(true)
-        guard let emailid = self.txt_emailid.text else
-        {
-            return
-        }
-        guard let password = self.txt_password.text else
-        {
-            return
-        }
-        let credential = Credentials(emailid: emailid, password: password)
-      
-       try? KeychainInterface.save(password: KeychainInterface.stringToNSDATA(string: credential.password) as Data, service: KEYSPROJECT.savedata, account: credential.emailid)
+//        self.view.endEditing(true)
+//        guard let emailid = self.txt_emailid.text else
+//        {
+//            return
+//        }
+//        guard let password = self.txt_password.text else
+//        {
+//            return
+//        }
+//        let credential = Credentials(emailid: emailid, password: password)
+//      
+//       try? KeychainInterface.save(password: KeychainInterface.stringToNSDATA(string: credential.password) as Data, service: KEYSPROJECT.savedata, account: credential.emailid)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboardVC") as! DashboardVC
         self.navigationController?.pushViewController(vc, animated: true)
         

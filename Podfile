@@ -8,4 +8,5 @@ target 'PhotoGallary' do
   # Pods for PhotoGallary
 pod 'IQKeyboardManagerSwift'
 pod 'AFNetworking'
+pod 'SDWebImage'
 end

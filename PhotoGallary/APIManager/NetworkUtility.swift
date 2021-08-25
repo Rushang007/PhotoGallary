@@ -31,7 +31,7 @@ class NetworkUtility
                {
                if  let objCodable = try? JSONDecoder().decode(resultType, from: dataJson) as? ResponseData
                {
-                _=completionHandler(objCodable.Data as? T)
+                _=completionHandler(objCodable as? T)
                }
                
                }

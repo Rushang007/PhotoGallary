@@ -7,15 +7,17 @@
 
 import Foundation
 
-struct ResponseData:Codable {
-    var Status:Bool? = nil
-    var Message:String? = nil
-    var Data:[Gallary] = []
+struct ResponseData: Decodable {
+    let errorMessage: String
+    let gallary: [Gallary]
+
+    enum CodingKeys: String, CodingKey {
+        case gallary = "data"
+        case errorMessage
+    }
 }
-struct Gallary :Codable
-{
-    var id:String
-    var download_url:String
-    var url:String
-    var author:String
+
+// MARK: - Datum
+struct Gallary: Decodable {
+    let name, image: String
 }

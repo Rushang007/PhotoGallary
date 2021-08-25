@@ -15,20 +15,26 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - IQKeyboardManagerSwift (6.5.6)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
 
 DEPENDENCIES:
   - AFNetworking
   - IQKeyboardManagerSwift
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - IQKeyboardManagerSwift
+    - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 1717f2d9355243705f875f18042ff26f1fb7b366
+PODFILE CHECKSUM: 0d4c3b039dc886f149d0205249c42abe194efe42
 
 COCOAPODS: 1.10.1

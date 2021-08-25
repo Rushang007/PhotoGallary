@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210552FD26D5DE8100619273 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210552FC26D5DE8100619273 /* LazyImageView.swift */; };
 		2148D13026D549E50009C14A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148D12F26D549E50009C14A /* AppDelegate.swift */; };
 		2148D13226D549E50009C14A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148D13126D549E50009C14A /* SceneDelegate.swift */; };
 		2148D13426D549E50009C14A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148D13326D549E50009C14A /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210552FC26D5DE8100619273 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
 		2148D12C26D549E50009C14A /* PhotoGallary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGallary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2148D12F26D549E50009C14A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2148D13126D549E50009C14A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				2148D14726D54ED30009C14A /* Supports */,
 				219E417E26D556CD00478E43 /* Constants.swift */,
 				219E418626D5623600478E43 /* PhotoGallary-Bridging-Header.h */,
+				210552FC26D5DE8100619273 /* LazyImageView.swift */,
 			);
 			path = PhotoGallary;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				219E417D26D5565300478E43 /* KeychainHelper.swift in Sources */,
 				219E418826D562FA00478E43 /* Gallary_Model.swift in Sources */,
 				2148D13226D549E50009C14A /* SceneDelegate.swift in Sources */,
+				210552FD26D5DE8100619273 /* LazyImageView.swift in Sources */,
 				219E418326D5602500478E43 /* DashboardVC.swift in Sources */,
 				219E417F26D556CD00478E43 /* Constants.swift in Sources */,
 				219E418526D560C100478E43 /* NetworkUtility.swift in Sources */,
